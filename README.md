@@ -108,6 +108,10 @@ npm run dev
 | `/study config removetopic <topic>` | Remove a study topic |
 | `/loveme setup @partner` | Set your partner (one-time, mutual) |
 | `/loveme now` | Get a cute love message from your partner 💕 |
+| `/countdown add <name> <date>` | Add a countdown to a special event |
+| `/countdown list` | List all your countdowns |
+| `/countdown view <name>` | View details of a specific countdown |
+| `/countdown remove <name>` | Remove a countdown |
 
 ## Deployment
 
@@ -330,6 +334,12 @@ docker-compose up -d
 4. Once you accumulate 60+ minutes in a day, it counts toward your streak
 5. If your partner is in the same voice channel, you both get tracked for "together time"
 6. 60+ minutes of together time = a "together day"
+
+## TODO
+
+Future features to implement:
+
+- [ ] **`/memories`** - Store and randomly recall special moments (photos, quotes, dates). "Remember when..." feature that lets you save special memories and have the bot randomly remind you of them.
 
 ## License
 
