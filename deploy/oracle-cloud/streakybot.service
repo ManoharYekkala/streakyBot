@@ -1,0 +1,28 @@
+[Unit]
+Description=StreakyBot Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/streakybot
+ExecStart=/usr/bin/node /opt/streakybot/dist/index.js
+Restart=always
+RestartSec=10
+
+# Environment file with secrets
+EnvironmentFile=/opt/streakybot/.env
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=streakybot
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/streakybot/data
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+node_modules
+src
+data
+.env
+.git
+.gitignore
+*.md
+tsconfig.json
+.dockerignore
+docker-compose.yml
