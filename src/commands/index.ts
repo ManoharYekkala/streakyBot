@@ -7,6 +7,7 @@ import {
 } from 'discord.js';
 import { studyCommand, studyCommandData } from './study';
 import { lovemeCommand, lovemeCommandData } from './loveme';
+import { countdownCommand, countdownCommandData } from './countdown';
 
 type CommandData = SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder;
 
@@ -26,6 +27,11 @@ commands.set(studyCommandData.name, {
 commands.set(lovemeCommandData.name, {
   data: lovemeCommandData,
   execute: lovemeCommand,
+});
+
+commands.set(countdownCommandData.name, {
+  data: countdownCommandData,
+  execute: countdownCommand,
 });
 
 export function getCommandsData(): CommandData[] {

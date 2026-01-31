@@ -46,6 +46,7 @@ export const DEFAULT_CONFIG = {
   together_days: 0,
   last_together_date: null as string | null,
   partners: {} as Record<string, { partnerId: string; partnerName: string }>,
+  countdowns: { events: [] } as { events: Array<{ id: string; name: string; date: string; emoji: string; createdBy: string; recurring: boolean }> },
 };
 
 export type ConfigKey = keyof typeof DEFAULT_CONFIG;
