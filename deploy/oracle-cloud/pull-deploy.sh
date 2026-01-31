@@ -34,9 +34,9 @@ git reset --hard origin/$BRANCH
 echo "3. Restoring local files..."
 git stash pop 2>/dev/null || true
 
-# Install dependencies
+# Install dependencies (including dev for TypeScript build)
 echo "4. Installing dependencies..."
-npm ci --only=production
+npm ci
 
 # Build TypeScript
 echo "5. Building..."
